@@ -1,0 +1,4 @@
+How to Run the Database
+- Type run.bat in the commad line
+
+
