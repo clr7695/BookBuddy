@@ -6,19 +6,50 @@
 
         async function signUp(){
 
-            console.log("something");
+            const ready = new Boolean(true);
 
-            const data = {
-                "username": document.getElementById("username2").value,
-                "email": document.getElementById("email").value,
-                "emailVisibility": true,
-                "password": document.getElementById("password2").value,
-                "passwordConfirm": document.getElementById("pass_confirm").value,
-                "name": document.getElementById("name").value
-            };
-            console.log(data);
+            //if username isn't valid
+            if(document.getElementById("username2").value.length > 150 || document.getElementById("username2").value.length < 3) {
+                alert("Username must be between 3 and 150 characters.");
+                ready = false;
+            }
 
-            const record = await pb.collection('users').create(data);
+            //if email isn't valid
+            if(!(document.getElementById("email").value.includes("@")) ) {
+                alert("Please enter a valid email.");
+                ready = false;
+            }
+
+            //password isn't valid
+            if(document.getElementById("password2").value.length > 72 || document.getElementById("password2").value.length < 8) {
+                alert("Password must be between 8 and 72 characters.");
+                ready = false;
+            }
+
+            //if passwords don't match
+            if(!(document.getElementById("password2").value === document.getElementById("pass_confirm").value)) {
+                alert("Passwords must match.");
+                ready = false;
+            }
+
+            if(ready) {
+                const data = {
+                    "username": document.getElementById("username2").value,
+                    "email": document.getElementById("email").value,
+                    "emailVisibility": true,
+                    "password": document.getElementById("password2").value,
+                    "passwordConfirm": document.getElementById("pass_confirm").value,
+                    "name": document.getElementById("name").value
+                };
+                console.log(data);
+
+                const record = await pb.collection('users').create(data);
+
+                //todo figure out how to redirect to the login page
+                //document.location.href = '/login.html', true;
+                
+            }
+            
             
         }
         
@@ -48,7 +79,7 @@
                 <input type="password" id="pass_confirm"/><br>
                 <label for="email">Email:</label>
                 <input type="email" id="email"/><br>
-                <button onclick="signUp()"><a href="index.html">Sign Up!</a></button>
+                <button onclick="signUp()">Sign Up!</button>
             </form>
             <p>Have an account already?</p>
             <a href="login.html">Login!</a>
