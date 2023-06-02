@@ -49,22 +49,22 @@
                 const record = await pb.collection('users').create(data);
             }
             
-            
-            
         }
-        
-
         
     </script>
     <head>
         <title>Sign Up for Book Buddy</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
     </head>
     <body>
         <header>
-            <nav>
-                <a href="index.html">About Us</a>
-                <a href="login.html">Login</a>
-            </nav>
+            <ul>
+                <li><img src="logo.png" class="logo"></li>
+                <li><a href="index.html">About Us</a></li>
+                <!--Add a link for every page here-->
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </header>
         <main>
             <h1>Sign Up for Book Buddy</h1>
@@ -81,8 +81,11 @@
                 <input type="email" id="email"/><br>
                 <button onclick="signUp()">Sign Up!</button>
             </form>
-            <p>Have an account already?</p>
-            <a href="login.html">Login!</a>
+            <p class="no_account">Have an account already?</p>
+            <a href="login.html" class="no_account">Login!</a>
         </main>
+        <footer>
+            <p>We hope you like Book Buddy!</p>
+        </footer>
     </body>
 </html>
