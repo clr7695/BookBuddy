@@ -21,6 +21,9 @@ header {
     border: 1px solid black;
     height: fit-content;
     font-family: 'Lora', serif;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
 header li a:hover {
     background-color: #f4f1de;
@@ -61,6 +64,9 @@ footer {
     height: fit-content;
     border-radius: 5px;
     border: 1px solid black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
 footer p {
     text-align: center;

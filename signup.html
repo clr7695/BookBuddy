@@ -34,7 +34,6 @@
 
             if(ready) {
 
-                alert("Account created!");
 
                 const data = {
                     "username": document.getElementById("username2").value,
@@ -46,7 +45,16 @@
                 };
                 console.log(data);
                 
-                const record = await pb.collection('users').create(data);
+                try {
+                    const record = await pb.collection('users').create(data);
+                    alert("Account created!");
+                } catch(error) {
+                    if(error.message.includes("Failed to create record.")) {
+                        alert("Account already exists! Please log in.");
+                    }
+                }
+
+                
             }
             
         }
@@ -68,7 +76,7 @@
         </header>
         <main>
             <h1>Sign Up for Book Buddy</h1>
-            <form>
+            <form onsubmit="return false;">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name"/><br>
                 <label for="username2">Username:</label>
