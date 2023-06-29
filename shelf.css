@@ -4,6 +4,8 @@ header ul {
     padding: 0;
     overflow: hidden;
     background-color:#3d405b;
+    width: 100%;
+    display: flex;
 }
 header li {
     float: left;
@@ -44,10 +46,6 @@ body {
     background-color: #f4f1de;
 }
 main a {
-    color: #3d405b;
-    font-family: 'Lora', serif;
-}
-footer a {
     color: #81b29a;
     font-family: 'Lora', serif;
 }
@@ -78,16 +76,52 @@ footer {
     border: 1px solid black;
     position: fixed;
     bottom: 0px;
-    width:  98.7%;
+    width: 98.7%;
 }
 footer p {
     text-align: center;
 }
-.group {
+footer a {
+    color: #81b29a;
+    font-family: 'Lora', serif;
+}
+.bookcontainer {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 98.7%;
+    height: fit-content;
+}
+.onebook {
     font-family: 'Lora', serif;
     padding: 20px;
     background-color:#81b29a;
+    width: fit-content;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 3px solid black;
+    margin: 20px;
+    justify-content: center;
     box-shadow: 5px 5px gray;
+}
+.bookpic {
+    width: 200px;
+    border-radius: 5px;
+    border: 3px solid black;
+    
+}
+.stars {
+    width: 200px;
+    border-radius: 5px;
+    border: 3px solid black;
+    justify-content: center;
+    height: fit-content;
+    background-color: #3d405b;
+}
+.star {
+    width: 18%;
+    padding: 0px;
+    border-radius: 5px;
+}
+#log {
+    justify-self: right;
 }
