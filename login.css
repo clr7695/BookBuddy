@@ -4,8 +4,6 @@ header ul {
     padding: 0;
     overflow: hidden;
     background-color:#3d405b;
-    width: 100%;
-    display: flex;
 }
 header li {
     float: left;
@@ -136,4 +134,7 @@ form input {
 }
 #log {
     justify-self: right;
+}
+#username1 {
+    margin-left: 34px;
 }

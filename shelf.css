@@ -30,9 +30,19 @@ header {
     width: 98.7%;
 }
 #log {
+    display: block;
+    background-color: #3d405b;
+    color: #f4f1de;
+    border-radius: 5px;
+    border: 1px solid black;
     position: fixed;
     top: 0px;
     right: 0.7%;
+    height: 50px;
+}
+#log:hover {
+    content: url(Person\ Yellow.png);
+    cursor: pointer;
 }
 header li a:hover {
     background-color: #f4f1de;
@@ -102,6 +112,10 @@ footer a {
     margin: 20px;
     justify-content: center;
     box-shadow: 5px 5px gray;
+}
+.onebook:hover {
+    cursor: pointer;
+    background-color: #f2cc8f;
 }
 .bookpic {
     width: 200px;
